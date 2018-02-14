@@ -17,7 +17,15 @@
       {
         type: "output",
         filter: function(text) {
-          return filterXSS(text);
+          var whiteList = filterXSS.getDefaultWhiteList();
+          whiteList = Object.assign(whiteList, {
+            a: ["id", "target", "href", "title"],
+            h1: ["id"],
+            h2: ["id"]
+          });
+          return filterXSS(text, {
+              whiteList: whiteList
+            });
         }
       }
     ];
