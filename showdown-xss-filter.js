@@ -21,7 +21,8 @@
           whiteList = Object.assign(whiteList, {
             a: ["id", "target", "href", "title"],
             h1: ["id"],
-            h2: ["id"]
+            h2: ["id"],
+            code: ["lang", "parameters"]
           });
           return filterXSS(text, {
               whiteList: whiteList
