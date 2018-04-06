@@ -22,7 +22,8 @@
             a: ["id", "target", "href", "title"],
             h1: ["id"],
             h2: ["id"],
-            code: ["lang", "parameters"]
+            code: ["lang"],
+            lab: ["lang", "parameters"]
           });
           return filterXSS(text, {
               whiteList: whiteList
