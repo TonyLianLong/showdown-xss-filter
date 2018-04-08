@@ -23,7 +23,8 @@
             h1: ["id"],
             h2: ["id"],
             code: ["lang"],
-            lab: ["lang", "parameters"]
+            lab: ["lang", "parameters"],
+            cr: ["type", "parameters"]
           });
           return filterXSS(text, {
               whiteList: whiteList
